@@ -77,3 +77,19 @@ $databases['d6source']['default'] = array(
 );
 ````
 
+## Possible Errors
+
+After importing the database, you might get:
+
+```
+Error: Class 'RulesEventHandlerEntityBundle' not found in
+/var/www/dgu/profiles/dgu/modules/contrib/rules/modules/node.rules.inc, line 147 [1.07
+sec, 31.97 MB]
+```
+
+To fix that run these commands as recommended [here](https://www.drupal.org/node/2090511):
+
+```
+drush updatedb
+drush dl rules
+```
